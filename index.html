@@ -6,7 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
-  <script src="hand_tracking.js" type="module"></script>
+  <script src="js/hand_tracking.js" type="module"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 </head>
@@ -15,6 +15,37 @@
   <main class="container">
     <video class="input_video"></video>
     <canvas class="output_canvas" width="1280px" height="720px"></canvas>
-  </ma>
+    <section class="inputs">
+      <h2 style="text-align: center; margin-bottom: 1rem;">Test Details</h2>
+      <hr>
+      <form class="form" action="">
+        <label for="tp">Testpersoon (nummer)</label>
+        <input id="pnum" name="tp" type="number" class="person_number" />
+        <label for="hand">Hand die gefotografeerd wordt</label>
+        <select id="hs" class="hand" name="hand" type="text">
+          <option value=""></option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+        <h2 style="margin-top: 2rem;">Aanzichten</h2>
+        <hr>
+        <section class="buttons_checkboxes">
+          <section class="buttons">
+            <button class="button" type="button">Rechter kant</button>
+            <button class="button" type="button">Bovenkant</button> 
+            <button class="button" type="button">Voorkant</button> 
+            <button class="button" type="button">Linker kant</button> 
+          </section>
+          <section class="checkboxes">
+            <input class="checkbox" type="checkbox" />
+            <input class="checkbox" type="checkbox" />
+            <input class="checkbox" type="checkbox" />
+            <input class="checkbox" type="checkbox" />
+          </section>
+        </section>
+        <!-- <button class="button" type="button" onclick="() => {window.location.reload()}">Nieuwe Meting</button> -->
+      </form>
+    </section>
+  </main>
 </body>
 </html>
